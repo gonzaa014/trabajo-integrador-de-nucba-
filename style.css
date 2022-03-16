@@ -1,0 +1,244 @@
+@import url('https://fonts.google.com/specimen/League+Gothic');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(19, 15, 13);
+    font-family: 'VT323', monospace;
+
+}
+
+header {
+    width: 100%;
+    background: rgb(116, 48, 9);
+    font-size: 20px;
+}
+
+/* Video home */
+
+.home-Video {
+    padding: 50px 0px;
+}
+
+.home-Video video {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+
+}
+
+/* Boton hamburguesa */
+
+#btn-menu {
+    display: none;
+}
+
+label img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Nav bar */
+
+.logo img {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+
+    left: 80%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin: 1em;
+    color: white ;
+}
+
+.menu li a:hover {
+    background-color: rgb(235, 234, 236);
+    cursor: pointer;
+}
+
+/* Sections */
+
+.home-Title {
+    display: flex;
+    justify-content: center ;
+    color: rgb(237, 241, 241);
+    letter-spacing: 20px;
+    text-align: center;
+
+    font-size: 15px;
+}
+
+.home-Info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    position: relative;
+    color: rgb(240, 235, 235);
+    top: 18em;
+
+    border: solid 1px rgb(243, 242, 239);
+    padding: 1.5em;
+    margin: 1em;
+}
+
+.home-Info h4 {
+    font-size: 23px;
+    letter-spacing: 10px;
+    padding: 10px;
+
+    color: rgb(248, 238, 238);
+}
+
+.home-Info p {
+    padding: 10px;
+    color: rgb(244, 242, 247);
+}
+
+.footer {
+    color: rgb(236, 227, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 18em;
+    padding-bottom: 20px;
+}
+
+.footer img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+    header label {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: black;
+        width: 70%;
+        top: 4em;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+    .home-Video video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+    
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .logo img {
+        position: absolute;
+        left: 90%;
+    }
+
+    .home-Info {
+        top: 18em;
+    }
+
+    .footer {
+        top: 18em;
+    }
+
+    .footer img {
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width: 412px) {
+    .home-Info {
+        top: 18em;
+    }
+
+    .footer {
+        top: 18em;
+    }
+
+    .footer img {
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .home-Info {
+        top: 25em;
+    }
+
+    .footer {
+        top: 25em;
+    }
+
+    .footer img {
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .home-Info {
+        top: 20em;
+    }
+
+    .footer {
+        top: 20em;
+    }
+
+    .footer img {
+        top: 20px;
+    }
+}

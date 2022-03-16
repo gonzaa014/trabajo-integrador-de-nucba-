@@ -1,0 +1,214 @@
+@import url('https://fonts.google.com/specimen/League+Gothic');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'VT323', monospace;
+    
+}
+
+header {
+    width: 100%;
+    background: rgb(116, 48, 9);
+    font-size: 20px;
+}
+
+.img-area {
+    background: url(./assets/contactgifbg.gif) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* Boton hamburguesa */
+
+#btn-menu {
+    display: none;
+}
+
+label img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Nav bar */
+
+.logo img {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+
+    left: 80%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin: 1em;
+    color: white ;
+}
+
+.menu li a:hover {
+    background-color: rgb(255, 29, 161);
+    cursor: pointer;
+}
+
+
+/* Contenido contacto */
+
+.content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.content-box h2 {
+    font-size: 3em;
+}
+
+.content-box span {
+    font-size: 20px;
+}
+
+.form-content {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.658);
+    width: 50%;
+    border-radius: 10px;
+}
+
+
+input {
+    height: 4em;
+    width: 30em;
+    background: none;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10px;
+    border-style: none;
+    border-bottom: solid 1px white;
+}
+
+textarea {
+    background: none;
+    height: 10em;
+    width: 30em;
+    border-style: none;
+    padding: 15px;
+    margin: 2px;
+    color: white;
+    border-bottom: solid 1px white;
+    resize: none;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.send-btn {
+    margin: 20px;
+    width: 10em;
+    height: 3em;
+    background: linear-gradient(90deg, rgb(180, 120, 29) 0%, rgb(214, 161, 13) 51%, rgb(12, 12, 12) 100%);
+    border-style: none;
+    color: rgb(255, 255, 255);
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .logo img {
+        position: absolute;
+        left: 89%;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    header label {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: black;
+        width: 70%;
+        top: 4em;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+
+    .container .box{
+        flex-direction: column;
+       }
+     
+     .container .box .dream{
+       width: 100%;
+     }
+}
+
+@media only screen and (max-width: 643px){
+
+    .form-content {
+        width: 100%;
+    }
+
+    input {
+        padding: 0;
+        margin: 0;
+        width: 20em;
+    }
+
+    textarea {
+        width: 20em;
+    }
+}
